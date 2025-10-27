@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal News</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles-desktop.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">Portal News</div>
+    <div class="date" id="date"></div>
+    <div class="hamburger" id="hamburger">☰</div>
+  </header>
+
+  <!-- Menú debajo del header -->
+  <nav class="menu" id="menu">
+    <a href="#">Inicio</a>
+    <a href="#">Mundo</a>
+    <a href="#">Deportes</a>
+    <a href="#">Cultura</a>
+    <a href="#">Economía</a>
+  </nav>
+
+  <div class="row">
+    <aside class="aside left-ads">
+      <div class="ad">Publicidad 1</div>
+    </aside>
+
+    <main class="main">
+      <section class="primary-news">
+        <img src="https://via.placeholder.com/600x300" alt="Noticia principal">
+        <h2>Título de la noticia principal</h2>
+        <p>Breve descripción de la noticia principal...</p>
+        <a href="#">Leer más</a>
+      </section>
+
+      <section class="secondary-news">
+        <h3>Otras noticias</h3>
+        <article><a href="#">Noticia secundaria 1</a></article>
+        <article><a href="#">Noticia secundaria 2</a></article>
+        <article><a href="#">Noticia secundaria 3</a></article>
+      </section>
+    </main>
+
+    <aside class="aside right-ads">
+      <div class="ad">Publicidad 2</div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 Portal News</p>
+  </footer>
+
+  <script>
+      // Obtener la fecha actual
+  const fecha = new Date();
+
+  // Opciones para formatear la fecha en español
+  const opciones = {
+    weekday: 'long',    // día de la semana
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  };
+
+  // Convertirla a texto legible (ej: "domingo, 26 de octubre de 2025")
+  const fechaFormateada = fecha.toLocaleDateString('es-ES', opciones);
+
+  // Insertarla en el elemento con id="date"
+  document.getElementById('date').textContent = fechaFormateada;
+
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+    hamburger.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>
