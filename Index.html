@@ -56,21 +56,21 @@
 
   <script>
       // Obtener la fecha actual
-  const fecha = new Date();
+    const fecha = new Date();
 
-  // Opciones para formatear la fecha en español
-  const opciones = {
-    weekday: 'long',    // día de la semana
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  };
+    // Opciones para formatear la fecha en español
+    const opciones = {
+        weekday: 'long',    // día de la semana
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    };
 
-  // Convertirla a texto legible (ej: "domingo, 26 de octubre de 2025")
-  const fechaFormateada = fecha.toLocaleDateString('es-ES', opciones);
+    // Convertirla a texto legible (ej: "domingo, 26 de octubre de 2025")
+    const fechaFormateada = fecha.toLocaleDateString('es-ES', opciones);
 
-  // Insertarla en el elemento con id="date"
-  document.getElementById('date').textContent = fechaFormateada;
+    // Insertarla en el elemento con id="date"
+    document.getElementById('date').textContent = fechaFormateada;
 
     const hamburger = document.getElementById('hamburger');
     const menu = document.getElementById('menu');
